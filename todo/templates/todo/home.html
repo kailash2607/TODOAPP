@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.username }}</h2>
+    <p>This is your dashboard.</p>
+
+    <form method="post" action="{% url 'add_task' %}">
+        {% csrf_token %}
+        <input type="text" name="task_name" placeholder="Enter task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        <li>Task 1 <a href="{% url 'delete_task' 1 %}">Delete</a></li>
+        <li>Task 2 <a href="{% url 'delete_task' 2 %}">Delete</a></li>
+    </ul>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
