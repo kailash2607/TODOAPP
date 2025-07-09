@@ -35,8 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo',  # 👈 ADD THIS LINE
-    'restaurant',  # 👈 and your new app if not added yet
+    'todo',
+    'restaurant',
+    'rental',
 ]
 
 MIDDLEWARE = [
